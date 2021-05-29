@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--
+                Use a content security policy to only allow loading images from https or from our extension directory,
+                and only allow scripts that have a specific nonce.
+            -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<%= tailwindtUri %>" rel="stylesheet">
+    <link href="<%= stylesResetUri %>" rel="stylesheet">
+    <link href="<%= stylesMainUri %>" rel="stylesheet">
+    <script nonce="<%= nonce %>" src="http://localhost:<%= port %>/socket.io/socket.io.js"></script>
+    <script nonce="<%= nonce %>">
+        window.socket = io("http://localhost:<%= port %>");
+        window.themeName = '<%= theme %>'
+    </script>
+</head>
+
+<body>
+    <nav class="bg-white mt-0 dark:bg-gray-700 shadow-sm">
+        <div class="px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex">
+                        <div class="flex items-center justify-center w-full">
+                            <label for="toggleB" class="flex items-center cursor-pointer">
+                                <!-- toggle -->
+                                <div class="relative">
+                                    <!-- input -->
+                                    <input type="checkbox" id="toggleB" class="sr-only" onclick="toggelTheme()">
+                                    <!-- line -->
+                                    <div class="block bg-gray-500 w-14 h-8 rounded-full"></div>
+                                    <!-- dot -->
+                                    <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ml-auto">
+                        <div class="flex space-x-4">
+                            <button class="btn" onclick="clearAll()">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id='log_area' />
+    <script nonce="<%= nonce %>" src="<%= scriptUri %>"></script>
+</body>
+
+</html>
