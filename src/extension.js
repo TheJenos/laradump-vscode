@@ -21,10 +21,6 @@ function activate(context) {
 
 	console.log('Laradump activated');
 
-	statusbar.serverOff();
-	server.serverOn();
-	panel = LaradumpPanel.createOrShow(context,server.getPort())
-
 	let startServerDisposable = vscode.commands.registerCommand('laradump.startServer', function () {
 		vscode.window.showInformationMessage('Laradump server started');
 		statusbar.serverOff();

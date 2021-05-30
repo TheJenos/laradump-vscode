@@ -2,6 +2,7 @@
   "name": "laradump",
   "displayName": "Laradump",
   "description": "Laradump helps to debugging on laravel",
+  "publisher": "laradump",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.56.0"
