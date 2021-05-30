@@ -1,7 +1,7 @@
 # Laradump (Free alternative of Spatie ray)
 ## Setup
 
-You need to install laradump-php in to your laravel project
+You need to install thejenos/laradump in to your laravel project
 
 ```bash
 composer require thejenos/laradump

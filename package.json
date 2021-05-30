@@ -3,6 +3,7 @@
   "displayName": "Laradump",
   "description": "Laradump helps to debugging on laravel",
   "publisher": "laradump",
+  "repository": "https://github.com/TheJenos/laradump-vscode",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.56.0"
