@@ -15,7 +15,9 @@ const {LaradumpPanel} = require('./laradumppanel');
 var statusbar;
 var server;
 var panel;
-function activate(context) {
+async function activate(context) {
+	if((await vscode.workspace.findFiles('**/artisan')).length < 1) return
+	
 	statusbar = new StatusBar();
 	server = new LiveServer();
 
