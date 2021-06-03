@@ -30,14 +30,15 @@ module.exports.LaradumpPanel = class LaradumpPanel {
     }
 
     static createOrShow(context, port) {
-        var column = vscode.window.activeTextEditor
-            ? vscode.window.activeTextEditor.viewColumn
-            : undefined;
-        var panel = vscode.window.createWebviewPanel('laradump', 'Laravel Dumps', column || vscode.ViewColumn.One, {
+        // var column = vscode.window.activeTextEditor
+        //     ? vscode.window.activeTextEditor.viewColumn
+        //     : undefined;
+        var panel = vscode.window.createWebviewPanel('laradump', 'Laravel Dumps', vscode.ViewColumn.Two, {
             enableScripts: true,
             retainContextWhenHidden: true,
             localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, 'media')]
         });
+        // vscode.window.move
         return new LaradumpPanel(panel, context.extensionUri, port, context);
     }
 
