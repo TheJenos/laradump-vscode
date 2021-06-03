@@ -7,6 +7,16 @@ You need to install thejenos/laradump in to your laravel project
 composer require thejenos/laradump
 ```
 
+After that start your laradump server whenever you need to see your dumps (This will only active on laravel projects)
+
+![laradump](https://i.ibb.co/p0f6dBh/image.png)
+
+## If you need to alter default configs
+
+```bash
+php artisan vendor:publish --provider="thejenos\laradump" --tag=config
+```
+
 ## Features
 
 ```php
