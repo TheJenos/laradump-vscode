@@ -1,0 +1,6 @@
+[submodule "laradump-server"]
+	path = laradump-server
+	url = https://github.com/TheJenos/laradump-server.git
+[submodule "laradump-ui"]
+	path = laradump-ui
+	url = https://github.com/TheJenos/laradump-ui.git
